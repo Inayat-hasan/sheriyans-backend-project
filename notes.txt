@@ -1,0 +1,21 @@
+usermodel: 
+ fullname
+ email
+ pss
+ cart - array
+ isAdmin - boolean
+ orders - array 
+ contact - number
+ picture
+
+
+productmodel:
+ name
+ price
+ discount
+ image
+ bgccolor
+ panel color
+ text color
+
+
