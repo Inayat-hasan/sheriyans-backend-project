@@ -1,7 +1,4 @@
 const mongoose = require('mongoose');
-const { stringify } = require('querystring');
-
-mongoose.connect(`mongodb://127.0.0.1:27017/megaproject`);
 
 const userSchema = mongoose.Schema(
     {
