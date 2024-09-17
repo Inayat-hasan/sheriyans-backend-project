@@ -1,5 +1,5 @@
 const { Schema } = require('mongoose');
-const mongoose = require('mongoose.');
+const mongoose = require('mongoose');
 
 const ownerSchema = Schema(
     {
@@ -15,7 +15,6 @@ const ownerSchema = Schema(
         },
         password: {
             type: String,
-            required: true
         },
         products: [
             {
@@ -26,7 +25,6 @@ const ownerSchema = Schema(
         ],
         picture: {
             type: String,
-            required: true
         },
         gstin: {
             type: String,
