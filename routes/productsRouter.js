@@ -1,8 +1,11 @@
 const express = require('express');
+const upload = require('../config/multer.config');
 const router = express.Router();
+const multer = require('multer')
 
-router.get('/',(req, res) => {
-    res.send("heyy! its working");
+
+router.post('/create',upload.single("image"),(req, res) => {
+    res.send(req.file);
 });
 
 module.exports = router;

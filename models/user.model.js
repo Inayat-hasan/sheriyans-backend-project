@@ -26,7 +26,6 @@ const userSchema = mongoose.Schema(
             ref: '',
             default: []
         }],
-        isadmin: Boolean,
         contact: Number,
         picture: String
     },
