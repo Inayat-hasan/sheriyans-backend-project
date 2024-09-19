@@ -3,8 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { generateToken } = require('../utils/generateToken');
 const userModel = require('../models/user.model');
-
-
+const flash = require('connect-flash');
 
 module.exports.registerUser = async (req, res) => {
     try {
@@ -44,7 +43,7 @@ module.exports.loginUser = async (req, res) => {
             res.cookie('token',token)
             res.redirect('/shop')
         } else {
-            res.status(500).send('Email or password is incorrect');
+            req.flash("error","email or password is incorrect");
             res.redirect('/');
         }
     })
